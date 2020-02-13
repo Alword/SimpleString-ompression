@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStringСompression", "SimpleStringСompression\SimpleStringСompression.csproj", "{17B3492D-AFAD-449A-8B72-1567789F0178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStringCompression.BusinessLogic", "SimpleStringCompression.BusinessLogic\SimpleStringCompression.BusinessLogic.csproj", "{313CBB81-8A06-40B9-B23C-9DBE9AD679B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17B3492D-AFAD-449A-8B72-1567789F0178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B3492D-AFAD-449A-8B72-1567789F0178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B3492D-AFAD-449A-8B72-1567789F0178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B3492D-AFAD-449A-8B72-1567789F0178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{313CBB81-8A06-40B9-B23C-9DBE9AD679B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313CBB81-8A06-40B9-B23C-9DBE9AD679B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313CBB81-8A06-40B9-B23C-9DBE9AD679B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313CBB81-8A06-40B9-B23C-9DBE9AD679B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC85FA85-C0A5-4D69-9A9A-F009830A2BCD}
+	EndGlobalSection
+EndGlobal
