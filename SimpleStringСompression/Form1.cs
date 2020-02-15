@@ -18,5 +18,11 @@ namespace SimpleStringСompression
         {
             textOutput.Text = stringCompressor.Compress(textInput.Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textInput.Text = "";
+            textOutput.Text = "";
+        }
     }
 }
