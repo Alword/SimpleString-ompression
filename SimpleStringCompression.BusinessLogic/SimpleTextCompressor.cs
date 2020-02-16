@@ -11,7 +11,7 @@ namespace SimpleStringCompression.BusinessLogic
     {
         public string Compress(string text)
         {
-            if (string.IsNullOrWhiteSpace(text))
+            if (string.IsNullOrEmpty(text))
                 return string.Empty;
 
             if (text.Length < 2)

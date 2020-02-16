@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\IStringCompressor.cs" />
+    <Compile Include="Abstractions\IStringValidator.cs" />
+    <Compile Include="StringValidator.cs" />
     <Compile Include="SimpleTextCompressor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
