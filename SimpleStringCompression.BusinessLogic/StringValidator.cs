@@ -2,14 +2,14 @@
 
 namespace SimpleStringCompression.BusinessLogic
 {
-    public class StringValidator : IStringValidator
+    public static class StringValidator
     {
-        public bool IsTooShort(string text)
+        public static bool IsTooShort(string text)
         {
             return string.IsNullOrEmpty(text);
         }
 
-        public bool IsTooLong(string text)
+        public static bool IsTooLong(string text)
         {
             return text != null && text.Length > 30;
         }

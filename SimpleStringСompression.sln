@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStringСompression", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStringCompression.BusinessLogic", "SimpleStringCompression.BusinessLogic\SimpleStringCompression.BusinessLogic.csproj", "{313CBB81-8A06-40B9-B23C-9DBE9AD679B9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{49C4F774-64E3-4863-9875-D9BC84E0D9DD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{49C4F774-64E3-4863-9875-D9BC84E0D9DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStringСompression.BusinessLogicTests", "SimpleStringСompression.BusinessLogicTests\SimpleStringСompression.BusinessLogicTests.csproj", "{E053F2CC-29D2-4CDA-B306-6DB9261FD09A}"
 EndProject

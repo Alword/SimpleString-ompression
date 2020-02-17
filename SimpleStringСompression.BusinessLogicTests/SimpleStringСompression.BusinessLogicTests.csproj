@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="SimpleTextCompressorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringValidatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
