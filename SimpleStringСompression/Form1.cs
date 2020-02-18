@@ -25,7 +25,7 @@ namespace SimpleStringСompression
         {
             if (StringValidator.IsTooShort(textInput.Text))
             {
-                MessageBox.Show($"Строка не должны быть пустой");
+                MessageBox.Show($"Строка должна содержать минимум 2 символа");
                 textOutput.Text = "";
             }
             else if (StringValidator.IsTooLong(textInput.Text))

@@ -1,9 +1,5 @@
 ﻿using SimpleStringCompression.BusinessLogic.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleStringCompression.BusinessLogic
 {
@@ -13,9 +9,6 @@ namespace SimpleStringCompression.BusinessLogic
         {
             if (string.IsNullOrEmpty(text))
                 return string.Empty;
-
-            if (text.Length < 2)
-                return text;
 
             StringBuilder stringBuilder = new StringBuilder();
 

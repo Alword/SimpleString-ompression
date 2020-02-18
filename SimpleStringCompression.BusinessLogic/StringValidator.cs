@@ -1,12 +1,10 @@
-﻿using SimpleStringCompression.BusinessLogic.Abstractions;
-
-namespace SimpleStringCompression.BusinessLogic
+﻿namespace SimpleStringCompression.BusinessLogic
 {
     public static class StringValidator
     {
         public static bool IsTooShort(string text)
         {
-            return string.IsNullOrEmpty(text);
+            return string.IsNullOrEmpty(text) || text.Length < 2;
         }
 
         public static bool IsTooLong(string text)

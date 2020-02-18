@@ -9,11 +9,10 @@ namespace SimpleStringСompression.BusinessLogicTests
         [TestMethod]
         public void CheckLowerBound()
         {
-
             Assert.AreEqual(StringValidator.IsTooShort(""), true);
             Assert.AreEqual(StringValidator.IsTooShort(null), true);
-            Assert.AreEqual(StringValidator.IsTooShort("1"), false);
-            Assert.AreEqual(StringValidator.IsTooShort(" "), false);
+            Assert.AreEqual(StringValidator.IsTooShort("1"), true);
+            Assert.AreEqual(StringValidator.IsTooShort("11"), false);
         }
 
         [TestMethod]

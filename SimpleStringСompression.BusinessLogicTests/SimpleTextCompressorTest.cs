@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimpleStringCompression.BusinessLogic;
 
 namespace SimpleStringСompression.BusinessLogicTests
@@ -10,16 +9,12 @@ namespace SimpleStringСompression.BusinessLogicTests
         [TestMethod]
         public void CompressSimpleString()
         {
-            // arrange
-            string text = "aaab";
-            string expected = "(3)ab";
             SimpleTextCompressor simpleTextCompressor = new SimpleTextCompressor();
 
-            // act
-            string actual = simpleTextCompressor.Compress(text);
-
-            // assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(simpleTextCompressor.Compress("aaab"), "(3)ab");
+            Assert.AreEqual(simpleTextCompressor.Compress("baab"), "b(2)ab");
+            Assert.AreEqual(simpleTextCompressor.Compress(""), "");
+            Assert.AreEqual(simpleTextCompressor.Compress(null), "");
         }
     }
 }
