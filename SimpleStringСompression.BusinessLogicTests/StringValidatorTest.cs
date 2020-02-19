@@ -21,7 +21,7 @@ namespace SimpleStringСompression.BusinessLogicTests
 
             Assert.IsTrue(StringValidator.IsTooLong("1111111111222222222233333333334"));
             Assert.IsTrue(StringValidator.IsTooLong("11111111112222222222333333333344"));
-            Assert.IsTrue(StringValidator.IsTooLong("111111111122222222223333333333"));
+            Assert.IsFalse(StringValidator.IsTooLong("111111111122222222223333333333"));
             Assert.IsFalse(StringValidator.IsTooLong(null));
         }
     }
