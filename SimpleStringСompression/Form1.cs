@@ -17,8 +17,8 @@ namespace SimpleStringСompression
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textInput.Text = "";
-            textOutput.Text = "";
+            textInput.Text = string.Empty;
+            textOutput.Text = string.Empty;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -26,12 +26,12 @@ namespace SimpleStringСompression
             if (StringValidator.IsTooShort(textInput.Text))
             {
                 MessageBox.Show($"Строка должна содержать минимум 2 символа");
-                textOutput.Text = "";
+                textOutput.Text = string.Empty;
             }
             else if (StringValidator.IsTooLong(textInput.Text))
             {
                 MessageBox.Show($"Длина строки не должна превышать 30 символов (сейчас {textInput.Text.Length})");
-                textOutput.Text = "";
+                textOutput.Text = string.Empty;
             }
             else
             {

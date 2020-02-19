@@ -6,15 +6,21 @@ namespace SimpleStringСompression.BusinessLogicTests
     [TestClass]
     public class SimpleTextCompressorTest
     {
-        [TestMethod]
-        public void CompressSimpleString()
+        [DataTestMethod]
+        [DataRow("aaab","(3)ab")]
+        [DataRow("baab","b(2)ab")]
+        [DataRow("","")]
+        [DataRow(null, "")]
+        public void CompressSimpleString(string testString, string expected)
         {
+            // arrange
             SimpleTextCompressor simpleTextCompressor = new SimpleTextCompressor();
 
-            Assert.AreEqual(simpleTextCompressor.Compress("aaab"), "(3)ab");
-            Assert.AreEqual(simpleTextCompressor.Compress("baab"), "b(2)ab");
-            Assert.AreEqual(simpleTextCompressor.Compress(""), "");
-            Assert.AreEqual(simpleTextCompressor.Compress(null), "");
+            // act 
+            string actual = simpleTextCompressor.Compress(testString);
+
+            // assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }

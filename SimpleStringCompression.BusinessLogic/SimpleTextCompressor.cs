@@ -5,7 +5,7 @@ namespace SimpleStringCompression.BusinessLogic
 {
     public class SimpleTextCompressor : IStringCompressor
     {
-        public string Compress(string text)
+        public virtual string Compress(string text)
         {
             if (string.IsNullOrEmpty(text))
                 return string.Empty;
