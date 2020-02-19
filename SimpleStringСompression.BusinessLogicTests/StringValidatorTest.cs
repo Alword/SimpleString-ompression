@@ -9,20 +9,20 @@ namespace SimpleStringСompression.BusinessLogicTests
         [TestMethod]
         public void CheckLowerBound()
         {
-            Assert.AreEqual(StringValidator.IsTooShort(""), true);
-            Assert.AreEqual(StringValidator.IsTooShort(null), true);
-            Assert.AreEqual(StringValidator.IsTooShort("1"), true);
-            Assert.AreEqual(StringValidator.IsTooShort("11"), false);
+            Assert.IsTrue(StringValidator.IsTooShort(""));
+            Assert.IsTrue(StringValidator.IsTooShort(null));
+            Assert.IsTrue(StringValidator.IsTooShort("1"));
+            Assert.IsFalse(StringValidator.IsTooShort("11"));
         }
 
         [TestMethod]
         public void CheckUpperBound()
         {
 
-            Assert.AreEqual(StringValidator.IsTooLong("1111111111222222222233333333334"), true);
-            Assert.AreEqual(StringValidator.IsTooLong("11111111112222222222333333333344"), true);
-            Assert.AreEqual(StringValidator.IsTooLong("111111111122222222223333333333"), false);
-            Assert.AreEqual(StringValidator.IsTooLong(null), false);
+            Assert.IsTrue(StringValidator.IsTooLong("1111111111222222222233333333334"));
+            Assert.IsTrue(StringValidator.IsTooLong("11111111112222222222333333333344"));
+            Assert.IsTrue(StringValidator.IsTooLong("111111111122222222223333333333"));
+            Assert.IsFalse(StringValidator.IsTooLong(null));
         }
     }
 }
