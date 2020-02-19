@@ -51,8 +51,119 @@ namespace SimpleStringCompression.CodedUITest
 
             // Щелкните "Очистить" кнопка
             Mouse.Click(uIОчиститьButton, new Point(29, 16));
+        }
 
-            Assert.IsTrue(string.IsNullOrEmpty(uITextInputEdit.Text));
+        /// <summary>
+        /// RecordedMethod2 - Используйте "RecordedMethod2Params" для передачи параметров в этот метод.
+        /// </summary>
+        public void RecordedMethod2()
+        {
+            #region Variable Declarations
+            WinEdit uITextInputEdit = this.UIStringCompressorWindow.UITextInputWindow.UITextInputEdit;
+            WinButton uIСжатьButton = this.UIStringCompressorWindow.UIСжатьWindow.UIСжатьButton;
+            WinEdit uITextOutputEdit = this.UIStringCompressorWindow.UITextOutputWindow.UITextOutputEdit;
+            #endregion
+
+            // Тип "abbba" в "textInput" надпись
+            uITextInputEdit.Text = this.RecordedMethod2Params.UITextInputEditText;
+
+            // Щелкните "Сжать" кнопка
+            Mouse.Click(uIСжатьButton, new Point(60, 17));
+
+            // Щелкните "textOutput" надпись
+            Mouse.Click(uITextOutputEdit, new Point(36, 8));
+        }
+
+        /// <summary>
+        /// StartApplication - Используйте "StartApplicationParams" для передачи параметров в этот метод.
+        /// </summary>
+        public void StartApplication()
+        {
+
+            // Запуск "%USERPROFILE%\source\repos\SimpleStringСompression\SimpleStringСompression\bin\Debug\SimpleStringСompression.exe"
+            ApplicationUnderTest simpleStringСompressionApplication = ApplicationUnderTest.Launch(this.StartApplicationParams.ExePath, this.StartApplicationParams.AlternateExePath);
+        }
+
+        /// <summary>
+        /// Type31Letter - Используйте "Type31LetterParams" для передачи параметров в этот метод.
+        /// </summary>
+        public void Type31Letter()
+        {
+            #region Variable Declarations
+            WinEdit uITextInputEdit = this.UIStringCompressorWindow.UITextInputWindow.UITextInputEdit;
+            WinButton uIСжатьButton = this.UIStringCompressorWindow.UIСжатьWindow.UIСжатьButton;
+            WinText uIЗаданныйаргументнахоText = this.UIЗаданныйаргументнахоWindow.UIЗаданныйаргументнахоText;
+            WinButton uIОКButton = this.UIОКWindow.UIОКButton;
+            WinEdit uITextOutputEdit = this.UIStringCompressorWindow.UITextOutputWindow.UITextOutputEdit;
+            WinButton uIОчиститьButton = this.UIStringCompressorWindow.UIОчиститьWindow.UIОчиститьButton;
+            #endregion
+
+            // Тип "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" в "textInput" надпись
+            uITextInputEdit.Text = this.Type31LetterParams.UITextInputEditText;
+
+            // Щелкните "Сжать" кнопка
+            Mouse.Click(uIСжатьButton, new Point(84, 17));
+
+            // Щелкните "Заданный аргумент находится вне диапазона допустим..." надпись
+            Mouse.Click(uIЗаданныйаргументнахоText, new Point(227, 8));
+
+            // Щелкните "ОК" кнопка
+            Mouse.Click(uIОКButton, new Point(45, 18));
+
+            // Щелкните "textOutput" надпись
+            Mouse.Click(uITextOutputEdit, new Point(143, 6));
+
+            // Щелкните "Очистить" кнопка
+            Mouse.Click(uIОчиститьButton, new Point(56, 17));
+        }
+
+        /// <summary>
+        /// CompareResult
+        /// </summary>
+        public void CompareResult()
+        {
+            #region Variable Declarations
+            WinEdit uITextOutputEdit = this.UIStringCompressorWindow.UITextOutputWindow.UITextOutputEdit;
+            #endregion
+
+            // Щелкните "textOutput" надпись
+            Mouse.Click(uITextOutputEdit, new Point(95, 6));
+        }
+
+        /// <summary>
+        /// RecordedMethod3
+        /// </summary>
+        public void RecordedMethod3()
+        {
+            #region Variable Declarations
+            WinEdit uITextOutputEdit = this.UIStringCompressorWindow.UITextOutputWindow.UITextOutputEdit;
+            #endregion
+
+            // Щелкните "textOutput" надпись
+            Mouse.Click(uITextOutputEdit, new Point(99, 10));
+        }
+
+        /// <summary>
+        /// TypeABBA - Используйте "TypeABBAParams" для передачи параметров в этот метод.
+        /// </summary>
+        public void TypeABBA()
+        {
+            #region Variable Declarations
+            WinEdit uITextInputEdit = this.UIStringCompressorWindow.UITextInputWindow.UITextInputEdit;
+            WinButton uIСжатьButton = this.UIStringCompressorWindow.UIСжатьWindow.UIСжатьButton;
+            WinEdit uITextOutputEdit = this.UIStringCompressorWindow.UITextOutputWindow.UITextOutputEdit;
+            #endregion
+
+            // Тип "abbba" в "textInput" надпись
+            uITextInputEdit.Text = this.TypeABBAParams.UITextInputEditText;
+
+            // Щелкните "Сжать" кнопка
+            Mouse.Click(uIСжатьButton, new Point(72, 12));
+
+            // Щелкните "textOutput" надпись
+            Mouse.Click(uITextOutputEdit, new Point(76, 15));
+
+            Assert.AreEqual("a(3)ba", uITextOutputEdit.Text);
         }
 
         #region Properties
@@ -65,6 +176,54 @@ namespace SimpleStringCompression.CodedUITest
                     this.mRecordedMethod1Params = new RecordedMethod1Params();
                 }
                 return this.mRecordedMethod1Params;
+            }
+        }
+
+        public virtual RecordedMethod2Params RecordedMethod2Params
+        {
+            get
+            {
+                if ((this.mRecordedMethod2Params == null))
+                {
+                    this.mRecordedMethod2Params = new RecordedMethod2Params();
+                }
+                return this.mRecordedMethod2Params;
+            }
+        }
+
+        public virtual StartApplicationParams StartApplicationParams
+        {
+            get
+            {
+                if ((this.mStartApplicationParams == null))
+                {
+                    this.mStartApplicationParams = new StartApplicationParams();
+                }
+                return this.mStartApplicationParams;
+            }
+        }
+
+        public virtual Type31LetterParams Type31LetterParams
+        {
+            get
+            {
+                if ((this.mType31LetterParams == null))
+                {
+                    this.mType31LetterParams = new Type31LetterParams();
+                }
+                return this.mType31LetterParams;
+            }
+        }
+
+        public virtual TypeABBAParams TypeABBAParams
+        {
+            get
+            {
+                if ((this.mTypeABBAParams == null))
+                {
+                    this.mTypeABBAParams = new TypeABBAParams();
+                }
+                return this.mTypeABBAParams;
             }
         }
 
@@ -91,14 +250,50 @@ namespace SimpleStringCompression.CodedUITest
                 return this.mUIStringCompressorWindow1;
             }
         }
+
+        public UIЗаданныйаргументнахоWindow UIЗаданныйаргументнахоWindow
+        {
+            get
+            {
+                if ((this.mUIЗаданныйаргументнахоWindow == null))
+                {
+                    this.mUIЗаданныйаргументнахоWindow = new UIЗаданныйаргументнахоWindow();
+                }
+                return this.mUIЗаданныйаргументнахоWindow;
+            }
+        }
+
+        public UIОКWindow UIОКWindow
+        {
+            get
+            {
+                if ((this.mUIОКWindow == null))
+                {
+                    this.mUIОКWindow = new UIОКWindow();
+                }
+                return this.mUIОКWindow;
+            }
+        }
         #endregion
 
         #region Fields
         private RecordedMethod1Params mRecordedMethod1Params;
 
+        private RecordedMethod2Params mRecordedMethod2Params;
+
+        private StartApplicationParams mStartApplicationParams;
+
+        private Type31LetterParams mType31LetterParams;
+
+        private TypeABBAParams mTypeABBAParams;
+
         private UIStringCompressorWindow mUIStringCompressorWindow;
 
         private UIStringCompressorWindow1 mUIStringCompressorWindow1;
+
+        private UIЗаданныйаргументнахоWindow mUIЗаданныйаргументнахоWindow;
+
+        private UIОКWindow mUIОКWindow;
         #endregion
     }
 
@@ -119,6 +314,73 @@ namespace SimpleStringCompression.CodedUITest
         /// Тип "тест" в "textInput" надпись
         /// </summary>
         public string UITextInputEditText1 = "тест";
+        #endregion
+    }
+
+    /// <summary>
+    /// Параметры для передачи в "RecordedMethod2"
+    /// </summary>
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class RecordedMethod2Params
+    {
+
+        #region Fields
+        /// <summary>
+        /// Тип "abbba" в "textInput" надпись
+        /// </summary>
+        public string UITextInputEditText = "abbba";
+        #endregion
+    }
+
+    /// <summary>
+    /// Параметры для передачи в "StartApplication"
+    /// </summary>
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class StartApplicationParams
+    {
+
+        #region Fields
+        /// <summary>
+        /// Запуск "%USERPROFILE%\source\repos\SimpleStringСompression\SimpleStringСompression\bin\Debug\SimpleStringСompression.exe"
+        /// </summary>
+        public string ExePath = "C:\\Users\\aasle\\source\\repos\\SimpleStringСompression\\SimpleStringСompression\\bin\\D" +
+            "ebug\\SimpleStringСompression.exe";
+
+        /// <summary>
+        /// Запуск "%USERPROFILE%\source\repos\SimpleStringСompression\SimpleStringСompression\bin\Debug\SimpleStringСompression.exe"
+        /// </summary>
+        public string AlternateExePath = "%USERPROFILE%\\source\\repos\\SimpleStringСompression\\SimpleStringСompression\\bin\\De" +
+            "bug\\SimpleStringСompression.exe";
+        #endregion
+    }
+
+    /// <summary>
+    /// Параметры для передачи в "Type31Letter"
+    /// </summary>
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class Type31LetterParams
+    {
+
+        #region Fields
+        /// <summary>
+        /// Тип "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" в "textInput" надпись
+        /// </summary>
+        public string UITextInputEditText = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        #endregion
+    }
+
+    /// <summary>
+    /// Параметры для передачи в "TypeABBA"
+    /// </summary>
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class TypeABBAParams
+    {
+
+        #region Fields
+        /// <summary>
+        /// Тип "abbba" в "textInput" надпись
+        /// </summary>
+        public string UITextInputEditText = "abbba";
         #endregion
     }
 
@@ -147,74 +409,6 @@ namespace SimpleStringCompression.CodedUITest
                 return this.mUITextInputWindow;
             }
         }
-        #endregion
-
-        #region Fields
-        private UITextInputWindow mUITextInputWindow;
-        #endregion
-    }
-
-    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
-    public class UITextInputWindow : WinWindow
-    {
-
-        public UITextInputWindow(UITestControl searchLimitContainer) :
-                base(searchLimitContainer)
-        {
-            #region Условия поиска
-            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "textInput";
-            this.WindowTitles.Add("StringCompressor");
-            #endregion
-        }
-
-        #region Properties
-        public WinEdit UITextInputEdit
-        {
-            get
-            {
-                if ((this.mUITextInputEdit == null))
-                {
-                    this.mUITextInputEdit = new WinEdit(this);
-                    #region Условия поиска
-                    this.mUITextInputEdit.WindowTitles.Add("StringCompressor");
-                    #endregion
-                }
-                return this.mUITextInputEdit;
-            }
-        }
-        #endregion
-
-        #region Fields
-        private WinEdit mUITextInputEdit;
-        #endregion
-    }
-
-    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
-    public class UIStringCompressorWindow1 : WinWindow
-    {
-
-        public UIStringCompressorWindow1()
-        {
-            #region Условия поиска
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "StringCompressor";
-            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
-            this.FilterProperties[WinWindow.PropertyNames.OrderOfInvocation] = "2";
-            this.WindowTitles.Add("StringCompressor");
-            #endregion
-        }
-
-        #region Properties
-        public UITextInputWindow1 UITextInputWindow
-        {
-            get
-            {
-                if ((this.mUITextInputWindow == null))
-                {
-                    this.mUITextInputWindow = new UITextInputWindow1(this);
-                }
-                return this.mUITextInputWindow;
-            }
-        }
 
         public UIСжатьWindow UIСжатьWindow
         {
@@ -225,6 +419,18 @@ namespace SimpleStringCompression.CodedUITest
                     this.mUIСжатьWindow = new UIСжатьWindow(this);
                 }
                 return this.mUIСжатьWindow;
+            }
+        }
+
+        public UITextOutputWindow UITextOutputWindow
+        {
+            get
+            {
+                if ((this.mUITextOutputWindow == null))
+                {
+                    this.mUITextOutputWindow = new UITextOutputWindow(this);
+                }
+                return this.mUITextOutputWindow;
             }
         }
 
@@ -239,22 +445,56 @@ namespace SimpleStringCompression.CodedUITest
                 return this.mUIОчиститьWindow;
             }
         }
+
+        public UIStringCompressorTitleBar UIStringCompressorTitleBar
+        {
+            get
+            {
+                if ((this.mUIStringCompressorTitleBar == null))
+                {
+                    this.mUIStringCompressorTitleBar = new UIStringCompressorTitleBar(this);
+                }
+                return this.mUIStringCompressorTitleBar;
+            }
+        }
+
+        public WinClient UIStringCompressorClient
+        {
+            get
+            {
+                if ((this.mUIStringCompressorClient == null))
+                {
+                    this.mUIStringCompressorClient = new WinClient(this);
+                    #region Условия поиска
+                    this.mUIStringCompressorClient.SearchProperties[WinControl.PropertyNames.Name] = "StringCompressor";
+                    this.mUIStringCompressorClient.WindowTitles.Add("StringCompressor");
+                    #endregion
+                }
+                return this.mUIStringCompressorClient;
+            }
+        }
         #endregion
 
         #region Fields
-        private UITextInputWindow1 mUITextInputWindow;
+        private UITextInputWindow mUITextInputWindow;
 
         private UIСжатьWindow mUIСжатьWindow;
 
+        private UITextOutputWindow mUITextOutputWindow;
+
         private UIОчиститьWindow mUIОчиститьWindow;
+
+        private UIStringCompressorTitleBar mUIStringCompressorTitleBar;
+
+        private WinClient mUIStringCompressorClient;
         #endregion
     }
 
     [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
-    public class UITextInputWindow1 : WinWindow
+    public class UITextInputWindow : WinWindow
     {
 
-        public UITextInputWindow1(UITestControl searchLimitContainer) :
+        public UITextInputWindow(UITestControl searchLimitContainer) :
                 base(searchLimitContainer)
         {
             #region Условия поиска
@@ -322,6 +562,41 @@ namespace SimpleStringCompression.CodedUITest
     }
 
     [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UITextOutputWindow : WinWindow
+    {
+
+        public UITextOutputWindow(UITestControl searchLimitContainer) :
+                base(searchLimitContainer)
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "textOutput";
+            this.WindowTitles.Add("StringCompressor");
+            #endregion
+        }
+
+        #region Properties
+        public WinEdit UITextOutputEdit
+        {
+            get
+            {
+                if ((this.mUITextOutputEdit == null))
+                {
+                    this.mUITextOutputEdit = new WinEdit(this);
+                    #region Условия поиска
+                    this.mUITextOutputEdit.WindowTitles.Add("StringCompressor");
+                    #endregion
+                }
+                return this.mUITextOutputEdit;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinEdit mUITextOutputEdit;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
     public class UIОчиститьWindow : WinWindow
     {
 
@@ -354,6 +629,321 @@ namespace SimpleStringCompression.CodedUITest
 
         #region Fields
         private WinButton mUIОчиститьButton;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIStringCompressorTitleBar : WinTitleBar
+    {
+
+        public UIStringCompressorTitleBar(UITestControl searchLimitContainer) :
+                base(searchLimitContainer)
+        {
+            #region Условия поиска
+            this.WindowTitles.Add("StringCompressor");
+            #endregion
+        }
+
+        #region Properties
+        public WinButton UIЗакрытьButton
+        {
+            get
+            {
+                if ((this.mUIЗакрытьButton == null))
+                {
+                    this.mUIЗакрытьButton = new WinButton(this);
+                    #region Условия поиска
+                    this.mUIЗакрытьButton.SearchProperties[WinButton.PropertyNames.Name] = "Закрыть";
+                    this.mUIЗакрытьButton.WindowTitles.Add("StringCompressor");
+                    #endregion
+                }
+                return this.mUIЗакрытьButton;
+            }
+        }
+
+        public WinButton UIРазвернутьButton
+        {
+            get
+            {
+                if ((this.mUIРазвернутьButton == null))
+                {
+                    this.mUIРазвернутьButton = new WinButton(this);
+                    #region Условия поиска
+                    this.mUIРазвернутьButton.SearchProperties[WinButton.PropertyNames.Name] = "Развернуть";
+                    this.mUIРазвернутьButton.WindowTitles.Add("StringCompressor");
+                    #endregion
+                }
+                return this.mUIРазвернутьButton;
+            }
+        }
+
+        public WinButton UIСвернутьButton
+        {
+            get
+            {
+                if ((this.mUIСвернутьButton == null))
+                {
+                    this.mUIСвернутьButton = new WinButton(this);
+                    #region Условия поиска
+                    this.mUIСвернутьButton.SearchProperties[WinButton.PropertyNames.Name] = "Свернуть";
+                    this.mUIСвернутьButton.WindowTitles.Add("StringCompressor");
+                    #endregion
+                }
+                return this.mUIСвернутьButton;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinButton mUIЗакрытьButton;
+
+        private WinButton mUIРазвернутьButton;
+
+        private WinButton mUIСвернутьButton;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIStringCompressorWindow1 : WinWindow
+    {
+
+        public UIStringCompressorWindow1()
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "StringCompressor";
+            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
+            this.FilterProperties[WinWindow.PropertyNames.OrderOfInvocation] = "2";
+            this.WindowTitles.Add("StringCompressor");
+            #endregion
+        }
+
+        #region Properties
+        public UITextInputWindow1 UITextInputWindow
+        {
+            get
+            {
+                if ((this.mUITextInputWindow == null))
+                {
+                    this.mUITextInputWindow = new UITextInputWindow1(this);
+                }
+                return this.mUITextInputWindow;
+            }
+        }
+
+        public UIСжатьWindow1 UIСжатьWindow
+        {
+            get
+            {
+                if ((this.mUIСжатьWindow == null))
+                {
+                    this.mUIСжатьWindow = new UIСжатьWindow1(this);
+                }
+                return this.mUIСжатьWindow;
+            }
+        }
+
+        public UIОчиститьWindow1 UIОчиститьWindow
+        {
+            get
+            {
+                if ((this.mUIОчиститьWindow == null))
+                {
+                    this.mUIОчиститьWindow = new UIОчиститьWindow1(this);
+                }
+                return this.mUIОчиститьWindow;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private UITextInputWindow1 mUITextInputWindow;
+
+        private UIСжатьWindow1 mUIСжатьWindow;
+
+        private UIОчиститьWindow1 mUIОчиститьWindow;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UITextInputWindow1 : WinWindow
+    {
+
+        public UITextInputWindow1(UITestControl searchLimitContainer) :
+                base(searchLimitContainer)
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "textInput";
+            this.WindowTitles.Add("StringCompressor");
+            #endregion
+        }
+
+        #region Properties
+        public WinEdit UITextInputEdit
+        {
+            get
+            {
+                if ((this.mUITextInputEdit == null))
+                {
+                    this.mUITextInputEdit = new WinEdit(this);
+                    #region Условия поиска
+                    this.mUITextInputEdit.WindowTitles.Add("StringCompressor");
+                    #endregion
+                }
+                return this.mUITextInputEdit;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinEdit mUITextInputEdit;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIСжатьWindow1 : WinWindow
+    {
+
+        public UIСжатьWindow1(UITestControl searchLimitContainer) :
+                base(searchLimitContainer)
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "button2";
+            this.WindowTitles.Add("StringCompressor");
+            #endregion
+        }
+
+        #region Properties
+        public WinButton UIСжатьButton
+        {
+            get
+            {
+                if ((this.mUIСжатьButton == null))
+                {
+                    this.mUIСжатьButton = new WinButton(this);
+                    #region Условия поиска
+                    this.mUIСжатьButton.SearchProperties[WinButton.PropertyNames.Name] = "Сжать";
+                    this.mUIСжатьButton.WindowTitles.Add("StringCompressor");
+                    #endregion
+                }
+                return this.mUIСжатьButton;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinButton mUIСжатьButton;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIОчиститьWindow1 : WinWindow
+    {
+
+        public UIОчиститьWindow1(UITestControl searchLimitContainer) :
+                base(searchLimitContainer)
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "button1";
+            this.WindowTitles.Add("StringCompressor");
+            #endregion
+        }
+
+        #region Properties
+        public WinButton UIОчиститьButton
+        {
+            get
+            {
+                if ((this.mUIОчиститьButton == null))
+                {
+                    this.mUIОчиститьButton = new WinButton(this);
+                    #region Условия поиска
+                    this.mUIОчиститьButton.SearchProperties[WinButton.PropertyNames.Name] = "Очистить";
+                    this.mUIОчиститьButton.WindowTitles.Add("StringCompressor");
+                    #endregion
+                }
+                return this.mUIОчиститьButton;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinButton mUIОчиститьButton;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIЗаданныйаргументнахоWindow : WinWindow
+    {
+
+        public UIЗаданныйаргументнахоWindow()
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "Заданный аргумент находится вне диапазона допустимых значений.\r\nИмя параметра: Дл" +
+                "ина строки не должна превышать 30 символов";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "Static";
+            this.WindowTitles.Add("Заданный аргумент находится вне диапазона допустимых значений.\r\nИмя параметра: Дл" +
+                    "ина строки не должна превышать 30 символов");
+            #endregion
+        }
+
+        #region Properties
+        public WinText UIЗаданныйаргументнахоText
+        {
+            get
+            {
+                if ((this.mUIЗаданныйаргументнахоText == null))
+                {
+                    this.mUIЗаданныйаргументнахоText = new WinText(this);
+                    #region Условия поиска
+                    this.mUIЗаданныйаргументнахоText.SearchProperties[WinText.PropertyNames.Name] = "Заданный аргумент находится вне диапазона допустимых значений.Имя параметра: Длин" +
+                        "а строки не должна превышать 30 символов";
+                    this.mUIЗаданныйаргументнахоText.WindowTitles.Add("Заданный аргумент находится вне диапазона допустимых значений.\r\nИмя параметра: Дл" +
+                            "ина строки не должна превышать 30 символов");
+                    #endregion
+                }
+                return this.mUIЗаданныйаргументнахоText;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinText mUIЗаданныйаргументнахоText;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIОКWindow : WinWindow
+    {
+
+        public UIОКWindow()
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "ОК";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "Button";
+            this.WindowTitles.Add("ОК");
+            #endregion
+        }
+
+        #region Properties
+        public WinButton UIОКButton
+        {
+            get
+            {
+                if ((this.mUIОКButton == null))
+                {
+                    this.mUIОКButton = new WinButton(this);
+                    #region Условия поиска
+                    this.mUIОКButton.SearchProperties[WinButton.PropertyNames.Name] = "ОК";
+                    this.mUIОКButton.WindowTitles.Add("ОК");
+                    #endregion
+                }
+                return this.mUIОКButton;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinButton mUIОКButton;
         #endregion
     }
 }
