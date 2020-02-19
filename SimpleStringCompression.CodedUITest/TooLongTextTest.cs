@@ -29,7 +29,7 @@ namespace SimpleStringCompression.CodedUITest
             // выберите в контекстном меню команду 
             // "Формирование кода для кодированного теста пользовательского интерфейса", 
             // а затем выберите один из пунктов меню.
-            this.UIMap.StartApplication();
+            //this.UIMap.StartApplication();
             this.UIMap.Type31Letter();
         }
 
