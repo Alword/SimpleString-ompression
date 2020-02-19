@@ -13,24 +13,41 @@ using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 namespace SimpleStringCompression.CodedUITest
 {
     /// <summary>
-    /// Сводное описание для CodedUITest1
+    /// Сводное описание для CodedUITest2
     /// </summary>
     [CodedUITest]
-    public class TooLongTextTest
+    public class CompressionTest
     {
-        public TooLongTextTest()
+        public CompressionTest()
         {
         }
 
         [TestMethod]
-        public void TypeTooLongTextMethod()
+        public void TooLongTextUITest()
         {
             // Чтобы создать код для этого теста, 
             // выберите в контекстном меню команду 
             // "Формирование кода для кодированного теста пользовательского интерфейса", 
             // а затем выберите один из пунктов меню.
             //this.UIMap.StartApplication();
-            this.UIMap.Type31Letter();
+            this.UIMap.Clear();
+            this.UIMap.Type32Letter();
+            this.UIMap.Compress();
+            this.UIMap.CloseDialogue();
+        }
+
+        [TestMethod]
+        public void TypeValidText()
+        {
+            // Чтобы создать код для этого теста, 
+            // выберите в контекстном меню команду 
+            // "Формирование кода для кодированного теста пользовательского интерфейса", 
+            // а затем выберите один из пунктов меню.
+            //this.UIMap.StartApplication();
+            this.UIMap.Clear();
+            this.UIMap.TypeABBBA();
+            this.UIMap.Compress();
+            this.UIMap.CompareResult();
         }
 
         #region Дополнительные атрибуты тестирования

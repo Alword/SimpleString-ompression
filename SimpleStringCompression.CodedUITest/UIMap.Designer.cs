@@ -30,91 +30,16 @@ namespace SimpleStringCompression.CodedUITest
     {
 
         /// <summary>
-        /// RecordedMethod1 - Используйте "RecordedMethod1Params" для передачи параметров в этот метод.
+        /// Clear
         /// </summary>
-        public void RecordedMethod1()
+        public void Clear()
         {
             #region Variable Declarations
-            WinEdit uITextInputEdit = this.UIStringCompressorWindow1.UITextInputWindow.UITextInputEdit;
-            WinButton uIСжатьButton = this.UIStringCompressorWindow1.UIСжатьWindow.UIСжатьButton;
-            WinButton uIОчиститьButton = this.UIStringCompressorWindow1.UIОчиститьWindow.UIОчиститьButton;
-            #endregion
-
-            // Тип "" в "textInput" надпись
-            uITextInputEdit.Text = this.RecordedMethod1Params.UITextInputEditText;
-
-            // Тип "тест" в "textInput" надпись
-            uITextInputEdit.Text = this.RecordedMethod1Params.UITextInputEditText1;
-
-            // Щелкните "Сжать" кнопка
-            Mouse.Click(uIСжатьButton, new Point(67, 13));
-
-            // Щелкните "Очистить" кнопка
-            Mouse.Click(uIОчиститьButton, new Point(29, 16));
-        }
-
-        /// <summary>
-        /// RecordedMethod2 - Используйте "RecordedMethod2Params" для передачи параметров в этот метод.
-        /// </summary>
-        public void RecordedMethod2()
-        {
-            #region Variable Declarations
-            WinEdit uITextInputEdit = this.UIStringCompressorWindow.UITextInputWindow.UITextInputEdit;
-            WinButton uIСжатьButton = this.UIStringCompressorWindow.UIСжатьWindow.UIСжатьButton;
-            WinEdit uITextOutputEdit = this.UIStringCompressorWindow.UITextOutputWindow.UITextOutputEdit;
-            #endregion
-
-            // Тип "abbba" в "textInput" надпись
-            uITextInputEdit.Text = this.RecordedMethod2Params.UITextInputEditText;
-
-            // Щелкните "Сжать" кнопка
-            Mouse.Click(uIСжатьButton, new Point(60, 17));
-
-            // Щелкните "textOutput" надпись
-            Mouse.Click(uITextOutputEdit, new Point(36, 8));
-        }
-
-        /// <summary>
-        /// StartApplication - Используйте "StartApplicationParams" для передачи параметров в этот метод.
-        /// </summary>
-        public void StartApplication()
-        {
-
-            // Запуск "%USERPROFILE%\source\repos\SimpleStringСompression\SimpleStringСompression\bin\Debug\SimpleStringСompression.exe"
-            ApplicationUnderTest simpleStringСompressionApplication = ApplicationUnderTest.Launch(this.StartApplicationParams.ExePath, this.StartApplicationParams.AlternateExePath);
-        }
-
-        /// <summary>
-        /// Type31Letter - Используйте "Type31LetterParams" для передачи параметров в этот метод.
-        /// </summary>
-        public void Type31Letter()
-        {
-            #region Variable Declarations
-            WinEdit uITextInputEdit = this.UIStringCompressorWindow.UITextInputWindow.UITextInputEdit;
-            WinButton uIСжатьButton = this.UIStringCompressorWindow.UIСжатьWindow.UIСжатьButton;
-            WinText uIЗаданныйаргументнахоText = this.UIЗаданныйаргументнахоWindow.UIЗаданныйаргументнахоText;
-            WinButton uIОКButton = this.UIОКWindow.UIОКButton;
-            WinEdit uITextOutputEdit = this.UIStringCompressorWindow.UITextOutputWindow.UITextOutputEdit;
             WinButton uIОчиститьButton = this.UIStringCompressorWindow.UIОчиститьWindow.UIОчиститьButton;
             #endregion
 
-            // Тип "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" в "textInput" надпись
-            uITextInputEdit.Text = this.Type31LetterParams.UITextInputEditText;
-
-            // Щелкните "Сжать" кнопка
-            Mouse.Click(uIСжатьButton, new Point(84, 17));
-
-            // Щелкните "Заданный аргумент находится вне диапазона допустим..." надпись
-            Mouse.Click(uIЗаданныйаргументнахоText, new Point(227, 8));
-
-            // Щелкните "ОК" кнопка
-            Mouse.Click(uIОКButton, new Point(45, 18));
-
-            // Щелкните "textOutput" надпись
-            Mouse.Click(uITextOutputEdit, new Point(143, 6));
-
             // Щелкните "Очистить" кнопка
-            Mouse.Click(uIОчиститьButton, new Point(56, 17));
+            Mouse.Click(uIОчиститьButton, new Point(49, 10));
         }
 
         /// <summary>
@@ -128,25 +53,40 @@ namespace SimpleStringCompression.CodedUITest
 
             // Щелкните "textOutput" надпись
             Mouse.Click(uITextOutputEdit, new Point(95, 6));
+
+            Assert.AreEqual("a(3)ba", uITextOutputEdit.Text);
         }
 
         /// <summary>
-        /// RecordedMethod3
+        /// Compress
         /// </summary>
-        public void RecordedMethod3()
+        public void Compress()
         {
             #region Variable Declarations
-            WinEdit uITextOutputEdit = this.UIStringCompressorWindow.UITextOutputWindow.UITextOutputEdit;
+            WinButton uIСжатьButton = this.UIStringCompressorWindow.UIСжатьWindow.UIСжатьButton;
             #endregion
 
-            // Щелкните "textOutput" надпись
-            Mouse.Click(uITextOutputEdit, new Point(99, 10));
+            // Щелкните "Сжать" кнопка
+            Mouse.Click(uIСжатьButton, new Point(47, 17));
         }
 
         /// <summary>
-        /// TypeABBA - Используйте "TypeABBAParams" для передачи параметров в этот метод.
+        /// Type32Letter - Используйте "Type32LetterParams" для передачи параметров в этот метод.
         /// </summary>
-        public void TypeABBA()
+        public void Type32Letter()
+        {
+            #region Variable Declarations
+            WinEdit uITextInputEdit = this.UIStringCompressorWindow.UITextInputWindow.UITextInputEdit;
+            #endregion
+
+            // Тип "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" в "textInput" надпись
+            uITextInputEdit.Text = this.Type32LetterParams.UITextInputEditText;
+        }
+
+        /// <summary>
+        /// TypeABBBA - Используйте "TypeABBBAParams" для передачи параметров в этот метод.
+        /// </summary>
+        public void TypeABBBA()
         {
             #region Variable Declarations
             WinEdit uITextInputEdit = this.UIStringCompressorWindow.UITextInputWindow.UITextInputEdit;
@@ -155,75 +95,56 @@ namespace SimpleStringCompression.CodedUITest
             #endregion
 
             // Тип "abbba" в "textInput" надпись
-            uITextInputEdit.Text = this.TypeABBAParams.UITextInputEditText;
+            uITextInputEdit.Text = this.TypeABBBAParams.UITextInputEditText;
 
             // Щелкните "Сжать" кнопка
             Mouse.Click(uIСжатьButton, new Point(72, 12));
 
             // Щелкните "textOutput" надпись
             Mouse.Click(uITextOutputEdit, new Point(76, 15));
+        }
 
-            Assert.AreEqual("a(3)ba", uITextOutputEdit.Text);
+        /// <summary>
+        /// CloseDialogue
+        /// </summary>
+        public void CloseDialogue()
+        {
+            #region Variable Declarations
+            WinControl uIItemDialog = this.UIItemWindow.UIItemWindow1.UIItemDialog;
+            WinButton uIОКButton = this.UIОКWindow.UIОКButton;
+            #endregion
+
+            // Щелкните Dialog
+            Mouse.Click(uIItemDialog, new Point(281, 80));
+
+            Assert.IsTrue(uIItemDialog.Exists);
+
+            // Щелкните "ОК" кнопка
+            Mouse.Click(uIОКButton, new Point(17, 12));
         }
 
         #region Properties
-        public virtual RecordedMethod1Params RecordedMethod1Params
+        public virtual Type32LetterParams Type32LetterParams
         {
             get
             {
-                if ((this.mRecordedMethod1Params == null))
+                if ((this.mType32LetterParams == null))
                 {
-                    this.mRecordedMethod1Params = new RecordedMethod1Params();
+                    this.mType32LetterParams = new Type32LetterParams();
                 }
-                return this.mRecordedMethod1Params;
+                return this.mType32LetterParams;
             }
         }
 
-        public virtual RecordedMethod2Params RecordedMethod2Params
+        public virtual TypeABBBAParams TypeABBBAParams
         {
             get
             {
-                if ((this.mRecordedMethod2Params == null))
+                if ((this.mTypeABBBAParams == null))
                 {
-                    this.mRecordedMethod2Params = new RecordedMethod2Params();
+                    this.mTypeABBBAParams = new TypeABBBAParams();
                 }
-                return this.mRecordedMethod2Params;
-            }
-        }
-
-        public virtual StartApplicationParams StartApplicationParams
-        {
-            get
-            {
-                if ((this.mStartApplicationParams == null))
-                {
-                    this.mStartApplicationParams = new StartApplicationParams();
-                }
-                return this.mStartApplicationParams;
-            }
-        }
-
-        public virtual Type31LetterParams Type31LetterParams
-        {
-            get
-            {
-                if ((this.mType31LetterParams == null))
-                {
-                    this.mType31LetterParams = new Type31LetterParams();
-                }
-                return this.mType31LetterParams;
-            }
-        }
-
-        public virtual TypeABBAParams TypeABBAParams
-        {
-            get
-            {
-                if ((this.mTypeABBAParams == null))
-                {
-                    this.mTypeABBAParams = new TypeABBAParams();
-                }
-                return this.mTypeABBAParams;
+                return this.mTypeABBBAParams;
             }
         }
 
@@ -274,18 +195,36 @@ namespace SimpleStringCompression.CodedUITest
                 return this.mUIОКWindow;
             }
         }
+
+        public UIЗаданныйаргументнахоWindow1 UIЗаданныйаргументнахоWindow1
+        {
+            get
+            {
+                if ((this.mUIЗаданныйаргументнахоWindow1 == null))
+                {
+                    this.mUIЗаданныйаргументнахоWindow1 = new UIЗаданныйаргументнахоWindow1();
+                }
+                return this.mUIЗаданныйаргументнахоWindow1;
+            }
+        }
+
+        public UIItemWindow UIItemWindow
+        {
+            get
+            {
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow();
+                }
+                return this.mUIItemWindow;
+            }
+        }
         #endregion
 
         #region Fields
-        private RecordedMethod1Params mRecordedMethod1Params;
+        private Type32LetterParams mType32LetterParams;
 
-        private RecordedMethod2Params mRecordedMethod2Params;
-
-        private StartApplicationParams mStartApplicationParams;
-
-        private Type31LetterParams mType31LetterParams;
-
-        private TypeABBAParams mTypeABBAParams;
+        private TypeABBBAParams mTypeABBBAParams;
 
         private UIStringCompressorWindow mUIStringCompressorWindow;
 
@@ -294,86 +233,33 @@ namespace SimpleStringCompression.CodedUITest
         private UIЗаданныйаргументнахоWindow mUIЗаданныйаргументнахоWindow;
 
         private UIОКWindow mUIОКWindow;
+
+        private UIЗаданныйаргументнахоWindow1 mUIЗаданныйаргументнахоWindow1;
+
+        private UIItemWindow mUIItemWindow;
         #endregion
     }
 
     /// <summary>
-    /// Параметры для передачи в "RecordedMethod1"
+    /// Параметры для передачи в "Type32Letter"
     /// </summary>
     [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
-    public class RecordedMethod1Params
+    public class Type32LetterParams
     {
 
         #region Fields
         /// <summary>
-        /// Тип "" в "textInput" надпись
+        /// Тип "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" в "textInput" надпись
         /// </summary>
-        public string UITextInputEditText = "";
-
-        /// <summary>
-        /// Тип "тест" в "textInput" надпись
-        /// </summary>
-        public string UITextInputEditText1 = "тест";
+        public string UITextInputEditText = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
         #endregion
     }
 
     /// <summary>
-    /// Параметры для передачи в "RecordedMethod2"
+    /// Параметры для передачи в "TypeABBBA"
     /// </summary>
     [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
-    public class RecordedMethod2Params
-    {
-
-        #region Fields
-        /// <summary>
-        /// Тип "abbba" в "textInput" надпись
-        /// </summary>
-        public string UITextInputEditText = "abbba";
-        #endregion
-    }
-
-    /// <summary>
-    /// Параметры для передачи в "StartApplication"
-    /// </summary>
-    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
-    public class StartApplicationParams
-    {
-
-        #region Fields
-        /// <summary>
-        /// Запуск "%USERPROFILE%\source\repos\SimpleStringСompression\SimpleStringСompression\bin\Debug\SimpleStringСompression.exe"
-        /// </summary>
-        public string ExePath = "C:\\Users\\aasle\\source\\repos\\SimpleStringСompression\\SimpleStringСompression\\bin\\D" +
-            "ebug\\SimpleStringСompression.exe";
-
-        /// <summary>
-        /// Запуск "%USERPROFILE%\source\repos\SimpleStringСompression\SimpleStringСompression\bin\Debug\SimpleStringСompression.exe"
-        /// </summary>
-        public string AlternateExePath = "%USERPROFILE%\\source\\repos\\SimpleStringСompression\\SimpleStringСompression\\bin\\De" +
-            "bug\\SimpleStringСompression.exe";
-        #endregion
-    }
-
-    /// <summary>
-    /// Параметры для передачи в "Type31Letter"
-    /// </summary>
-    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
-    public class Type31LetterParams
-    {
-
-        #region Fields
-        /// <summary>
-        /// Тип "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" в "textInput" надпись
-        /// </summary>
-        public string UITextInputEditText = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-        #endregion
-    }
-
-    /// <summary>
-    /// Параметры для передачи в "TypeABBA"
-    /// </summary>
-    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
-    public class TypeABBAParams
+    public class TypeABBBAParams
     {
 
         #region Fields
@@ -944,6 +830,111 @@ namespace SimpleStringCompression.CodedUITest
 
         #region Fields
         private WinButton mUIОКButton;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIЗаданныйаргументнахоWindow1 : WinWindow
+    {
+
+        public UIЗаданныйаргументнахоWindow1()
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "Заданный аргумент находится вне диапазона допустимых значений.\r\nИмя параметра: Ст" +
+                "рока должна содержать минимум 2 символа";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "Static";
+            this.WindowTitles.Add("Заданный аргумент находится вне диапазона допустимых значений.\r\nИмя параметра: Ст" +
+                    "рока должна содержать минимум 2 символа");
+            #endregion
+        }
+
+        #region Properties
+        public WinText UIЗаданныйаргументнахоText
+        {
+            get
+            {
+                if ((this.mUIЗаданныйаргументнахоText == null))
+                {
+                    this.mUIЗаданныйаргументнахоText = new WinText(this);
+                    #region Условия поиска
+                    this.mUIЗаданныйаргументнахоText.SearchProperties[WinText.PropertyNames.Name] = "Заданный аргумент находится вне диапазона допустимых значений.Имя параметра: Стро" +
+                        "ка должна содержать минимум 2 символа";
+                    this.mUIЗаданныйаргументнахоText.WindowTitles.Add("Заданный аргумент находится вне диапазона допустимых значений.\r\nИмя параметра: Ст" +
+                            "рока должна содержать минимум 2 символа");
+                    #endregion
+                }
+                return this.mUIЗаданныйаргументнахоText;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinText mUIЗаданныйаргументнахоText;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIItemWindow : WinWindow
+    {
+
+        public UIItemWindow()
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Рабочий стол 1";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32769";
+            #endregion
+        }
+
+        #region Properties
+        public UIItemWindow1 UIItemWindow1
+        {
+            get
+            {
+                if ((this.mUIItemWindow1 == null))
+                {
+                    this.mUIItemWindow1 = new UIItemWindow1(this);
+                }
+                return this.mUIItemWindow1;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private UIItemWindow1 mUIItemWindow1;
+        #endregion
+    }
+
+    [GeneratedCode("Построитель кодированных тестов ИП", "16.0.28315.86")]
+    public class UIItemWindow1 : WinWindow
+    {
+
+        public UIItemWindow1(UITestControl searchLimitContainer) :
+                base(searchLimitContainer)
+        {
+            #region Условия поиска
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32770";
+            #endregion
+        }
+
+        #region Properties
+        public WinControl UIItemDialog
+        {
+            get
+            {
+                if ((this.mUIItemDialog == null))
+                {
+                    this.mUIItemDialog = new WinControl(this);
+                    #region Условия поиска
+                    this.mUIItemDialog.SearchProperties[UITestControl.PropertyNames.ControlType] = "Dialog";
+                    #endregion
+                }
+                return this.mUIItemDialog;
+            }
+        }
+        #endregion
+
+        #region Fields
+        private WinControl mUIItemDialog;
         #endregion
     }
 }
