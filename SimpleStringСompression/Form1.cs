@@ -12,7 +12,7 @@ namespace SimpleStringСompression
         public Form1()
         {
             InitializeComponent();
-            stringCompressor = new SimpleTextCompressor();
+            stringCompressor = new ValidationCompressor((text) => StringValidator.IsValid(text));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -23,20 +23,19 @@ namespace SimpleStringСompression
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (StringValidator.IsTooShort(textInput.Text))
-            {
-                MessageBox.Show($"Строка должна содержать минимум 2 символа");
-                textOutput.Text = string.Empty;
-            }
-            else if (StringValidator.IsTooLong(textInput.Text))
-            {
-                MessageBox.Show($"Длина строки не должна превышать 30 символов (сейчас {textInput.Text.Length})");
-                textOutput.Text = string.Empty;
-            }
-            else
+
+            textOutput.Text = string.Empty;
+
+            try
             {
                 textOutput.Text = stringCompressor.Compress(textInput.Text);
             }
+            catch (ArgumentOutOfRangeException exection)
+            {
+                MessageBox.Show(exection.Message);
+                textOutput.Text = string.Empty;
+            }
+
         }
     }
 }

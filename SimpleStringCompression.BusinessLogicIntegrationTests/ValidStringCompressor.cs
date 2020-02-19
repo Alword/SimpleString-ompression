@@ -8,8 +8,8 @@ namespace SimpleStringCompression.BusinessLogicIntegrationTests
     [TestClass]
     public class ValidStringCompressor
     {
-        private const string tooLongException = "text is tooLong";
-        private const string tooShortException = "text is tooShort";
+        private const string tooLongException = StringValidator.TOO_LONG_EXCEPTION;
+        private const string tooShortException = StringValidator.TOO_SHORT_EXCEPTION;
 
         [DataTestMethod]
         [DataRow("abbc", "a(2)bc")]
